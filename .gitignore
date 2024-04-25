@@ -27,3 +27,6 @@ replay_pid*
 PerScholas.iml
 out/
 *.idea
+
+# misc. macOS
+.DS_Store
