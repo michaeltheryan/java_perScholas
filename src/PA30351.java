@@ -43,10 +43,8 @@ public class PA30351 {
 
     public static int greatestCommonDenominator(int num1, int num2) {
         int startNum = num1 > num2 ? num2 : num1;
-        boolean found = false;
         for (int i = startNum; i > 0; i--) {
             if (num1 % i == 0 && num2 % i == 0) {
-                found = true;
                 return i;
             }
         }
@@ -56,7 +54,7 @@ public class PA30351 {
     public static void tuitionDoubledYears(double tuition, double yearlyIncrease) {
         double runningTuition = tuition;
         int i = 0;
-        for (; runningTuition <= tuition * 2; i++) {
+        for (; runningTuition < tuition * 2; i++) {
             runningTuition += yearlyIncrease * tuition;
         }
         System.out.println("Tuition will double in " + i + " years.");
