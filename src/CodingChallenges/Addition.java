@@ -1,31 +1,31 @@
-package PracticeSBA;
+package CodingChallenges;
 
-public class Subtraction {
+public class Addition {
     public static void main(String[] args) {
         String s = "824";
-        subtractionPrint(s);
+        additionPrint(s);
     }
 
-    public static void subtractionPrint(String str) {
+    public static void additionPrint(String str) {
         String[] stringSplit = str.split("");
-        int difference = Integer.parseInt(stringSplit[0]);
-        StringBuilder outcomeFirst = new StringBuilder("Summary: " + stringSplit[0] + " - ");
+        int sum = Integer.parseInt(stringSplit[0]);
+        StringBuilder outcomeFirst = new StringBuilder("Summary: " + stringSplit[0] + " + ");
         StringBuilder outcomeSecond = new StringBuilder();
         for (int i = 1; i < stringSplit.length; i++) {
             outcomeFirst.append(stringSplit[i]);
-            outcomeSecond.append(difference);
-            outcomeSecond.append(" - ");
+            outcomeSecond.append(sum);
+            outcomeSecond.append(" + ");
             outcomeSecond.append(Integer.parseInt(stringSplit[i]));
             outcomeSecond.append(" = ");
-            difference -= Integer.parseInt(stringSplit[i]);
-            outcomeSecond.append(difference);
+            sum += Integer.parseInt(stringSplit[i]);
+            outcomeSecond.append(sum);
             outcomeSecond.append("\n");
-            outcomeFirst.append(" - ");
+            outcomeFirst.append(" + ");
         }
         outcomeFirst.replace(outcomeFirst.length() - 3, outcomeFirst.length() -1, " =");
-        outcomeFirst.append(difference);
+        outcomeFirst.append(sum);
         System.out.println(outcomeFirst);
         System.out.println(outcomeSecond);
-        System.out.println("Answer = " + difference + "\n");
+        System.out.println("Answer = " + sum + "\n");
     }
 }

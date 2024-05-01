@@ -9,7 +9,7 @@ public class Division {
     public static void divisionPrint(String str) {
         String[] stringSplit = str.split("");
         int quotient = Integer.parseInt(stringSplit[0]);
-        StringBuilder outcomeFirst = new StringBuilder(stringSplit[0] + " ÷ ");
+        StringBuilder outcomeFirst = new StringBuilder("Summary: " + stringSplit[0] + " ÷ ");
         StringBuilder outcomeSecond = new StringBuilder();
         for (int i = 1; i < stringSplit.length; i++) {
             outcomeFirst.append(stringSplit[i]);
@@ -26,6 +26,6 @@ public class Division {
         outcomeFirst.append(quotient);
         System.out.println(outcomeFirst);
         System.out.println(outcomeSecond);
-        System.out.println("Answer = " + quotient);
+        System.out.println("Answer = " + quotient + "\n");
     }
 }
