@@ -22,7 +22,7 @@ public class LambdaExpressions {
         } else {
             String first = n.substring(0, 1);
             String second = n.substring(1, n.length() -1).toLowerCase();
-            String third = n.substring(n.length() -1, n.length()).toUpperCase();
+            String third = n.substring(n.length() -1).toUpperCase();
             n = first + second + third;
             System.out.println(n);
         }
