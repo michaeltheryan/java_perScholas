@@ -52,6 +52,14 @@ public class Player {
         this.age = age;
     }
 
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int age) {
+        this.experience = experience;
+    }
+
     public String getPosition() {
         return position;
     }
@@ -104,14 +112,14 @@ public class Player {
         return firstName + " " + lastName;
     }
     public String firstLastAndPosition(){
-        return firstAndLast()+" "+position;
+        return firstAndLast() + " " + position;
     }
     public String firstLastAndSalary(){
-        return firstAndLast()+" "+salary;
+        return firstAndLast() + " " + salary;
     }
 
     public String firstLastAndTeam(){
-        return firstAndLast()+" "+team;
+        return firstAndLast() + " " + team;
     }
 
     public int convertPlayerHeightToCm(int height){

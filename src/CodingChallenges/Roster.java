@@ -1,5 +1,8 @@
 package CodingChallenges;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Roster {
     private Player[] league;
     private int lastIndex;
@@ -26,39 +29,80 @@ public class Roster {
     }
 
     public String[] lastNameThatStartWith(String Letter){
-        return new String[]{""};
+        List<String> people = new ArrayList<String>();
+        for(Player person : league) {
+            if (person.getLastName().substring(0, 1).equals(Letter)) {
+                people.add(person.firstAndLast());
+            }
+        }
+        return (String[]) people.toArray();
     }
 
 
     public int getTotalPlayersFromCollege(String college){
-
-        return 0;
+        List<Player> people = new ArrayList<Player>();
+        for(Player person : league) {
+            if (person.getCollege().equals(college)) {
+                people.add(person);
+            }
+        }
+        return people.size();
     }
 
     public int getTotalPlayersWithAge(int age){
-
-        return 0;
+        List<Player> people = new ArrayList<Player>();
+        for(Player person : league) {
+            if (person.getAge() == age) {
+                people.add(person);
+            }
+        }
+        return people.size();
     }
     public int getTotalPlayersWithPosition(String position){
-
-        return 0;
+        List<Player> people = new ArrayList<Player>();
+        for(Player person : league) {
+            if (person.getPosition().equals(position)) {
+                people.add(person);
+            }
+        }
+        return people.size();
     }
     public int getTotalPlayersWithHeight(double height){
-
-        return 0;
+        List<Player> people = new ArrayList<Player>();
+        for(Player person : league) {
+            if (person.getHeight() == height) {
+                people.add(person);
+            }
+        }
+        return people.size();
     }
     public double getTotalPlayersWithWeight(double weight){
-
-        return 0;
+        List<Player> people = new ArrayList<Player>();
+        for(Player person : league) {
+            if (person.getWeight() == weight) {
+                people.add(person);
+            }
+        }
+        return people.size();
     }
     public int getTotalPlayersWithExperience(int experience){
-
-        return 0;
+        List<Player> people = new ArrayList<Player>();
+        for(Player person : league) {
+            if (person.getExperience() == experience) {
+                people.add(person);
+            }
+        }
+        return people.size();
     }
 
     public int[] getPlayersFromCollege(String college){
-
-        return new int[]{};
+        List<Integer> people = new ArrayList<Integer>();
+        for(Player person : league) {
+            if (person.getCollege().equals(college)) {
+                people.add(person.getAge());
+            }
+        }
+        return people.stream().mapToInt(i -> i).toArray();
     }
 
     public int[] getPlayersWithAge(int age){
